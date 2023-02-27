@@ -1,0 +1,40 @@
+#StandardError=
+#Controls where file descriptor 1 (STDOUT) of the executed processes is connecte                               d to.
+# one of inherit, null, tty, journal, syslog, kmsg, journal+console, syslog+cons                               ole, kmsg+console or socket.
+
+# cp to /lib/systemd/system
+#Created symlink /etc/systemd/system/multi-user.target.wants/solar2heater.service → /lib/systemd/system/solar2heater.service.
+
+#KillMode=¶
+#Specifies how processes of this unit shall be killed. One of control-group, mixed, process, none.
+#it is not recommended to set KillMode= to process or even none,
+#Defaults to control-group
+
+[Unit]
+Description=solar2heater: solar surplus dispatch to existing heaters
+After=network.target
+
+[Service]
+Type=simple
+#ExecStartPre=
+ExecStart=/home/pi/solar2heater/solar2heater.py 
+ExecStop=kill -9 `pgrep solar2heater`
+
+WorkingDirectory=/home/pi/solar2heater
+
+StandardOutput=null
+
+StandardError=syslog
+SyslogIdentifier=solar2heater
+
+#StandardOutput=append:/var/log/bird_watching.log
+#journalctl -u bird_watching -f
+
+KillMode=control-group
+Restart=on-failure
+RestartSec=45s
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
