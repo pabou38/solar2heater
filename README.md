@@ -1,2 +1,3 @@
 # solar2heater
-solar2heater: use 100% of your solar production to keep your home warm
+Automatically feed all excess solar energy, and only excess, into existing electric heaters.
+
