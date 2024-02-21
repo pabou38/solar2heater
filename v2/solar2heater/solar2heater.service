@@ -1,0 +1,39 @@
+# cp to /lib/systemd/system
+#Created symlink /etc/systemd/system/multi-user.target.wants/solar2heater.service → /lib/systemd/system/solar2heater.service.
+
+
+#####################
+# journalctl -u solar2heater
+# systemctl daemon-reload
+####################
+
+[Unit]
+Description=solar2heater: solar surplus dispatch to existing heaters
+After=network.target
+
+[Service]
+Type=simple
+#ExecStartPre=
+ExecStart=/home/pi/APP/solar2heater/solar2heater.py 
+ExecStop=kill -9 `pgrep solar2heater`
+
+WorkingDirectory=/home/pi/APP/solar2heater
+
+StandardOutput=null
+
+#Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+#StandardError=syslog
+StandardError=journal
+SyslogIdentifier=solar2heater
+
+# need systemctl --version > 240
+StandardError=append:/home/pi/ramdisk/solar2heater_systemd_stderr.log
+
+KillMode=control-group
+Restart=on-failure
+RestartSec=45s
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

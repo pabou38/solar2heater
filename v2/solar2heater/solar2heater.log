@@ -1,0 +1,330 @@
+INFO 2024-02-15 17:55:05,764 --- solar2heater 3.63 starting ---
+INFO 2024-02-15 17:55:07,560  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-15 17:55:07,561 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-15 17:55:09,579 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-15 17:55:09,579 cannot create st7789 display
+INFO 2024-02-15 17:55:09,813 automation disabled
+INFO 2024-02-15 17:55:09,814 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-15 17:55:09,815 index for primary 0
+INFO 2024-02-15 17:55:10,781 blynk automation synced OK.
+INFO 2024-02-15 17:55:10,781 automation false, leave heaters as it at application start
+INFO 2024-02-15 17:55:11,282 remote pzem volt: 212.30
+INFO 2024-02-15 17:55:11,632 remote pzem amps: 0.00
+INFO 2024-02-15 17:55:11,986 remote pzem power: 0.00
+INFO 2024-02-15 17:55:12,009 entering into/starting at nite while automation is: False
+INFO 2024-02-15 17:55:12,009 entering into/starting at nite: automation False. leave heater alone
+WARNING 2024-02-16 01:00:02,034 got signal 15. automation: False
+INFO 2024-02-16 01:00:02,036 got SIGNAL: automation disable. do nothing
+INFO 2024-02-16 01:00:02,036 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-16 01:01:41,992 --- solar2heater 3.63 starting ---
+INFO 2024-02-16 01:02:48,884 --- solar2heater 3.63 starting ---
+INFO 2024-02-16 01:02:50,703  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-16 01:02:50,704 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-16 01:02:52,714 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-16 01:02:52,714 cannot create st7789 display
+INFO 2024-02-16 01:02:52,964 automation disabled
+INFO 2024-02-16 01:02:52,965 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-16 01:02:52,966 index for primary 0
+INFO 2024-02-16 01:02:53,928 blynk automation synced OK.
+INFO 2024-02-16 01:02:53,928 automation false, leave heaters as it at application start
+INFO 2024-02-16 01:02:54,440 remote pzem volt: 210.40
+INFO 2024-02-16 01:02:54,789 remote pzem amps: 0.00
+INFO 2024-02-16 01:02:55,143 remote pzem power: 0.00
+INFO 2024-02-16 01:02:55,155 entering into/starting at nite while automation is: False
+INFO 2024-02-16 01:02:55,155 entering into/starting at nite: automation False. leave heater alone
+ERROR 2024-02-16 08:25:45,090 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 08:35:07,334 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 08:44:28,614 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 08:53:51,100 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 09:03:13,782 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 09:12:35,598 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 09:21:59,963 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 09:31:21,651 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+ERROR 2024-02-16 09:40:42,937 exception getting HT data: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+INFO 2024-02-16 09:42:13,258 automation enabled
+ERROR 2024-02-16 09:42:13,258 Exception on /enable_automation [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/pi/APP/solar2heater/solar2heater.py", line 1745, in automation_on
+    enabling_automation()
+  File "/home/pi/APP/solar2heater/solar2heater.py", line 1069, in enabling_automation
+    blynk.virtual_write(vpin.v_terminal, s)
+  File "../Blynk/Blynk_client/BlynkLib_new.py", line 84, in virtual_write
+    self._send(MSG_HW, 'vw', pin, *val)
+  File "../Blynk/Blynk_client/BlynkLib_new.py", line 117, in _send
+    self._write(msg)
+  File "../Blynk/Blynk_client/BlynkLib_new.py", line 249, in _write
+    self.conn.write(data)
+  File "/usr/lib/python3.9/ssl.py", line 1118, in write
+    return self._sslobj.write(data)
+ssl.SSLZeroReturnError: TLS/SSL connection has been closed (EOF) (_ssl.c:2472)
+INFO 2024-02-16 09:43:18,446 ==> we are drawing from grid 3592.7. primary False, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-16 09:45:19,253 ==> we are drawing from grid 3666.2. primary False, secondary False. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-16 09:47:22,994 ==> we are drawing from grid 1467.5. primary False, secondary False. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-16 09:47:22,994 react to soutir. primary 0. primary is on False, secondary is on False
+INFO 2024-02-16 09:47:22,994 drawing from grid. but all heaters already off.. net conso 1467W. router 0W. production 479W. total conso 1946W
+INFO 2024-02-16 09:48:08,634 --- solar2heater 3.63 starting ---
+INFO 2024-02-16 09:48:10,647  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-16 09:48:10,648 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-16 09:48:12,704 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-16 09:48:12,705 cannot create st7789 display
+INFO 2024-02-16 09:48:12,943 automation disabled
+INFO 2024-02-16 09:48:12,943 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-16 09:48:12,944 index for primary 0
+INFO 2024-02-16 09:48:13,909 blynk automation synced OK.
+INFO 2024-02-16 09:48:13,909 automation false, leave heaters as it at application start
+INFO 2024-02-16 09:48:14,184 remote pzem volt: 219.90
+INFO 2024-02-16 09:48:14,546 remote pzem amps: 0.00
+INFO 2024-02-16 09:48:14,893 remote pzem power: 0.00
+INFO 2024-02-16 10:50:46,348 automation enabled
+INFO 2024-02-16 10:51:26,568 automation disabled
+INFO 2024-02-16 10:51:26,569 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-16 17:00:32,543 entering into/starting at nite while automation is: False
+INFO 2024-02-16 17:00:32,544 entering into/starting at nite: automation False. leave heater alone
+WARNING 2024-02-17 01:00:02,067 got signal 15. automation: False
+INFO 2024-02-17 01:00:02,069 got SIGNAL: automation disable. do nothing
+INFO 2024-02-17 01:00:02,069 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-17 01:01:42,707 --- solar2heater 3.63 starting ---
+INFO 2024-02-17 01:02:49,536 --- solar2heater 3.63 starting ---
+INFO 2024-02-17 01:02:51,136  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-17 01:02:51,137 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-17 01:02:52,700 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-17 01:02:52,700 cannot create st7789 display
+INFO 2024-02-17 01:02:52,943 automation disabled
+INFO 2024-02-17 01:02:52,943 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-17 01:02:52,944 index for primary 0
+INFO 2024-02-17 01:02:53,908 blynk automation synced OK.
+INFO 2024-02-17 01:02:53,908 automation false, leave heaters as it at application start
+INFO 2024-02-17 01:02:54,392 remote pzem volt: 227.00
+INFO 2024-02-17 01:02:54,741 remote pzem amps: 0.00
+INFO 2024-02-17 01:02:55,089 remote pzem power: 0.00
+INFO 2024-02-17 01:02:55,105 entering into/starting at nite while automation is: False
+INFO 2024-02-17 01:02:55,106 entering into/starting at nite: automation False. leave heater alone
+WARNING 2024-02-17 07:26:34,069 got signal 15. automation: False
+INFO 2024-02-17 07:26:34,091 got SIGNAL: automation disable. do nothing
+INFO 2024-02-17 07:26:34,091 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-17 07:28:14,131 --- solar2heater 3.63 starting ---
+INFO 2024-02-17 07:29:21,346 --- solar2heater 3.63 starting ---
+INFO 2024-02-17 07:29:22,868  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-17 07:29:22,869 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-17 07:29:25,218 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-17 07:29:25,219 cannot create st7789 display
+INFO 2024-02-17 07:29:25,483 automation disabled
+INFO 2024-02-17 07:29:25,485 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-17 07:29:25,487 index for primary 0
+INFO 2024-02-17 07:29:26,451 blynk automation synced OK.
+INFO 2024-02-17 07:29:26,451 automation false, leave heaters as it at application start
+INFO 2024-02-17 07:29:26,914 remote pzem volt: 216.90
+INFO 2024-02-17 07:29:27,260 remote pzem amps: 0.00
+INFO 2024-02-17 07:29:27,615 remote pzem power: 0.00
+INFO 2024-02-17 07:29:27,627 entering into/starting at nite while automation is: False
+INFO 2024-02-17 07:29:27,628 entering into/starting at nite: automation False. leave heater alone
+WARNING 2024-02-18 01:00:02,690 got signal 15. automation: False
+INFO 2024-02-18 01:00:02,693 got SIGNAL: automation disable. do nothing
+INFO 2024-02-18 01:00:02,694 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-18 01:01:42,117 --- solar2heater 3.63 starting ---
+INFO 2024-02-18 01:02:49,764 --- solar2heater 3.63 starting ---
+INFO 2024-02-18 01:02:51,662  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-18 01:02:51,663 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-18 01:02:53,424 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-18 01:02:53,424 cannot create st7789 display
+INFO 2024-02-18 01:02:53,665 automation disabled
+INFO 2024-02-18 01:02:53,666 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-18 01:02:53,666 index for primary 0
+INFO 2024-02-18 01:02:54,632 blynk automation synced OK.
+INFO 2024-02-18 01:02:54,633 automation false, leave heaters as it at application start
+INFO 2024-02-18 01:02:54,992 remote pzem volt: 214.00
+INFO 2024-02-18 01:02:55,350 remote pzem amps: 0.00
+INFO 2024-02-18 01:02:55,697 remote pzem power: 0.00
+INFO 2024-02-18 01:02:55,710 entering into/starting at nite while automation is: False
+INFO 2024-02-18 01:02:55,710 entering into/starting at nite: automation False. leave heater alone
+WARNING 2024-02-19 01:00:02,907 got signal 15. automation: False
+INFO 2024-02-19 01:00:02,916 got SIGNAL: automation disable. do nothing
+INFO 2024-02-19 01:00:02,916 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-19 01:01:43,509 --- solar2heater 3.63 starting ---
+INFO 2024-02-19 01:02:50,408 --- solar2heater 3.63 starting ---
+INFO 2024-02-19 01:02:51,952  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-19 01:02:51,953 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-19 01:02:53,912 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-19 01:02:53,913 cannot create st7789 display
+INFO 2024-02-19 01:02:54,146 automation disabled
+INFO 2024-02-19 01:02:54,146 automation disabled. leave heaters as it (eg Winter and at home). please turn them OFF on your end, if needed
+INFO 2024-02-19 01:02:54,147 index for primary 0
+INFO 2024-02-19 01:02:55,115 blynk automation synced OK.
+INFO 2024-02-19 01:02:55,115 automation false, leave heaters as it at application start
+INFO 2024-02-19 01:02:55,535 remote pzem volt: 232.90
+INFO 2024-02-19 01:02:55,903 remote pzem amps: 0.00
+INFO 2024-02-19 01:02:56,259 remote pzem power: 0.00
+INFO 2024-02-19 01:02:56,272 entering into/starting at nite while automation is: False
+INFO 2024-02-19 01:02:56,272 entering into/starting at nite: automation False. leave heater alone
+INFO 2024-02-19 14:34:16,716 automation enabled
+WARNING 2024-02-19 14:49:39,494 WARNING: surplus -1880.4, while router not diverting enough 576.1 (expected 1800)
+INFO 2024-02-19 14:49:39,494 ==> we have surplus -1880.4, primary False, secondary False. react to surplus 2. solar router should be at its max 576.1
+WARNING 2024-02-19 16:18:42,056 WARNING: surplus -491.5, while router not diverting enough 434.9 (expected 1800)
+INFO 2024-02-19 16:18:42,057 ==> we have surplus -491.5, primary False, secondary False. react to surplus 2. solar router should be at its max 434.9
+WARNING 2024-02-19 16:34:52,185 WARNING: surplus -444.1, while router not diverting enough 518.0 (expected 1800)
+INFO 2024-02-19 16:34:52,185 ==> we have surplus -444.1, primary False, secondary False. react to surplus 2. solar router should be at its max 518.0
+WARNING 2024-02-20 01:00:03,026 got signal 15. automation: True
+INFO 2024-02-20 01:00:03,028 got SIGNAL: automation enabled. turns all heaters off.
+INFO 2024-02-20 01:00:03,029 in transition: turn all heaters off. because: got SIGNAL: automation enabled. turns all heaters off.
+INFO 2024-02-20 01:00:03,230 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-20 01:01:42,997 --- solar2heater 3.63 starting ---
+INFO 2024-02-20 01:02:49,611 --- solar2heater 3.63 starting ---
+INFO 2024-02-20 01:02:51,159  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-20 01:02:51,160 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-20 01:02:53,173 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-20 01:02:53,173 cannot create st7789 display
+INFO 2024-02-20 01:02:53,414 automation enabled
+INFO 2024-02-20 01:02:53,415 index for primary 0
+INFO 2024-02-20 01:02:54,379 blynk automation synced OK.
+INFO 2024-02-20 01:02:54,379 automation true, turn all heaters off at application start
+INFO 2024-02-20 01:02:54,379 in transition: turn all heaters off. because: application start and automation is true: True. turn off heaters
+INFO 2024-02-20 01:02:55,466 remote pzem volt: 233.70
+INFO 2024-02-20 01:02:55,826 remote pzem amps: 0.00
+INFO 2024-02-20 01:02:56,194 remote pzem power: 0.00
+INFO 2024-02-20 01:02:56,206 entering into/starting at nite while automation is: True
+INFO 2024-02-20 01:02:56,207 entering into/starting at nite: automation True. turn heaters off; let someone else care for it
+INFO 2024-02-20 01:02:56,207 in transition: turn all heaters off. because: entering into/starting at nite: automation True. turn heaters off; let someone else care for it
+WARNING 2024-02-20 09:55:52,557 WARNING: surplus -582.0, while router not diverting enough 479.7 (expected 1800)
+INFO 2024-02-20 09:55:52,559 ==> we have surplus -582.0, primary False, secondary False. react to surplus 2. solar router should be at its max 479.7
+WARNING 2024-02-20 10:03:58,072 WARNING: surplus -408.0, while router not diverting enough 506.0 (expected 1800)
+INFO 2024-02-20 10:03:58,073 ==> we have surplus -408.0, primary False, secondary False. react to surplus 2. solar router should be at its max 506.0
+WARNING 2024-02-20 10:08:00,760 WARNING: surplus -455.0, while router not diverting enough 571.9 (expected 1800)
+INFO 2024-02-20 10:08:00,761 ==> we have surplus -455.0, primary False, secondary False. react to surplus 2. solar router should be at its max 571.9
+WARNING 2024-02-20 10:10:01,540 WARNING: surplus -966.1, while router not diverting enough 612.9 (expected 1800)
+INFO 2024-02-20 10:10:01,541 ==> we have surplus -966.1, primary False, secondary False. react to surplus 1. solar router should be at its max 612.9
+WARNING 2024-02-20 10:12:02,587 WARNING: surplus -396.5, while router not diverting enough 483.4 (expected 1800)
+INFO 2024-02-20 10:12:02,588 ==> we have surplus -396.5, primary False, secondary False. react to surplus 0. solar router should be at its max 483.4
+INFO 2024-02-20 10:12:02,588 react to surplus: primary 0. primary is on False, secondary is on False
+INFO 2024-02-20 10:12:02,588 set primary on. surplus -396W. router 483W. production 1899W. total conso 1502W
+WARNING 2024-02-20 10:52:52,772 WARNING: surplus -1433.5, while router not diverting enough 576.6 (expected 1800)
+INFO 2024-02-20 10:52:52,772 ==> we have surplus -1433.5, primary True, secondary False. react to surplus 2. solar router should be at its max 576.6
+WARNING 2024-02-20 10:54:54,461 WARNING: surplus -316.2, while router not diverting enough 563.6 (expected 1800)
+INFO 2024-02-20 10:54:54,461 ==> we have surplus -316.2, primary True, secondary False. react to surplus 1. solar router should be at its max 563.6
+INFO 2024-02-20 11:25:11,274 ==> we are drawing from grid 885.5. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 11:33:16,335 ==> we are drawing from grid 930.6. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 11:35:17,634 ==> we are drawing from grid 501.5. primary True, secondary False. react to soutir 1. solar router should be at its min 0.0
+WARNING 2024-02-20 11:45:24,706 WARNING: surplus -905.3, while router not diverting enough 531.1 (expected 1800)
+INFO 2024-02-20 11:45:24,707 ==> we have surplus -905.3, primary True, secondary False. react to surplus 2. solar router should be at its max 531.1
+WARNING 2024-02-20 11:47:25,441 WARNING: surplus -1356.8, while router not diverting enough 526.6 (expected 1800)
+INFO 2024-02-20 11:47:25,442 ==> we have surplus -1356.8, primary True, secondary False. react to surplus 1. solar router should be at its max 526.6
+WARNING 2024-02-20 11:49:26,742 WARNING: surplus -1635.0, while router not diverting enough 573.3 (expected 1800)
+INFO 2024-02-20 11:49:26,742 ==> we have surplus -1635.0, primary True, secondary False. react to surplus 0. solar router should be at its max 573.3
+INFO 2024-02-20 11:49:26,742 react to surplus: primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 11:49:26,743 set secondary on. surplus -1635W. router 573W. production 3721W. total conso 2086W
+INFO 2024-02-20 11:57:53,060 ==> we are drawing from grid 671.9. primary True, secondary True. react to soutir 2. solar router should be at its min 0.0
+WARNING 2024-02-20 12:03:56,786 WARNING: surplus -353.6, while router not diverting enough 496.6 (expected 1800)
+INFO 2024-02-20 12:03:56,787 ==> we have surplus -353.6, primary True, secondary True. react to surplus 2. solar router should be at its max 496.6
+WARNING 2024-02-20 12:05:58,390 WARNING: drawing from grid 371.7, while router is still somehow diverting 208.7
+INFO 2024-02-20 12:05:58,390 ==> we are drawing from grid 371.7. primary True, secondary True. react to soutir 2. solar router should be at its min 208.7
+INFO 2024-02-20 12:07:59,173 ==> we are drawing from grid 1306.6. primary True, secondary True. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 12:10:00,521 ==> we are drawing from grid 419.4. primary True, secondary True. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 12:10:00,521 react to soutir. primary 0. primary is on True, secondary is on True
+INFO 2024-02-20 12:10:00,521 drawing from grid. set secondary off. surplus 419W. router 0W. production 2615W. total conso 3034W
+WARNING 2024-02-20 12:12:21,779 WARNING: surplus -762.5, while router not diverting enough 245.1 (expected 1800)
+INFO 2024-02-20 12:12:21,780 ==> we have surplus -762.5, primary True, secondary False. react to surplus 1. solar router should be at its max 245.1
+WARNING 2024-02-20 12:14:22,896 WARNING: surplus -908.1, while router not diverting enough 358.0 (expected 1800)
+INFO 2024-02-20 12:14:22,896 ==> we have surplus -908.1, primary True, secondary False. react to surplus 0. solar router should be at its max 358.0
+INFO 2024-02-20 12:14:22,896 react to surplus: primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 12:14:22,897 set secondary on. surplus -908W. router 358W. production 1749W. total conso 841W
+INFO 2024-02-20 12:18:46,140 ==> we are drawing from grid 928.5. primary True, secondary True. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 12:20:47,741 ==> we are drawing from grid 691.6. primary True, secondary True. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 12:22:48,821 ==> we are drawing from grid 1566.1. primary True, secondary True. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 12:22:48,822 react to soutir. primary 0. primary is on True, secondary is on True
+INFO 2024-02-20 12:22:48,822 drawing from grid. set secondary off. surplus 1566W. router 0W. production 1236W. total conso 2803W
+INFO 2024-02-20 12:27:11,744 ==> we are drawing from grid 856.3. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+WARNING 2024-02-20 12:29:12,838 WARNING: surplus -369.6, while router not diverting enough 0.0 (expected 1800)
+INFO 2024-02-20 12:29:12,838 ==> we have surplus -369.6, primary True, secondary False. react to surplus 2. solar router should be at its max 0.0
+WARNING 2024-02-20 12:31:14,126 WARNING: surplus -614.2, while router not diverting enough 0.0 (expected 1800)
+INFO 2024-02-20 12:31:14,127 ==> we have surplus -614.2, primary True, secondary False. react to surplus 1. solar router should be at its max 0.0
+WARNING 2024-02-20 12:33:15,498 WARNING: surplus -1270.6, while router not diverting enough 41.5 (expected 1800)
+INFO 2024-02-20 12:33:15,499 ==> we have surplus -1270.6, primary True, secondary False. react to surplus 0. solar router should be at its max 41.5
+INFO 2024-02-20 12:33:15,499 react to surplus: primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 12:33:15,499 set secondary on. surplus -1271W. router 42W. production 1413W. total conso 142W
+INFO 2024-02-20 12:35:37,710 ==> we are drawing from grid 1838.5. primary True, secondary True. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 12:37:38,480 ==> we are drawing from grid 1206.8. primary True, secondary True. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 12:37:38,480 react to soutir. primary 0. primary is on True, secondary is on True
+INFO 2024-02-20 12:37:38,480 drawing from grid. set secondary off. surplus 1207W. router 0W. production 1519W. total conso 2726W
+INFO 2024-02-20 12:39:59,790 ==> we are drawing from grid 686.1. primary True, secondary False. react to soutir 3. solar router should be at its min 0.0
+INFO 2024-02-20 12:42:00,859 ==> we are drawing from grid 346.5. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 12:44:02,762 ==> we are drawing from grid 641.8. primary True, secondary False. react to soutir 1. solar router should be at its min 0.0
+WARNING 2024-02-20 12:52:08,432 WARNING: surplus -494.0, while router not diverting enough 0.0 (expected 1800)
+INFO 2024-02-20 12:52:08,433 ==> we have surplus -494.0, primary True, secondary False. react to surplus 2. solar router should be at its max 0.0
+WARNING 2024-02-20 12:54:09,520 WARNING: surplus -525.3, while router not diverting enough 0.0 (expected 1800)
+INFO 2024-02-20 12:54:09,520 ==> we have surplus -525.3, primary True, secondary False. react to surplus 1. solar router should be at its max 0.0
+WARNING 2024-02-20 12:56:11,433 WARNING: surplus -510.0, while router not diverting enough 87.1 (expected 1800)
+INFO 2024-02-20 12:56:11,434 ==> we have surplus -510.0, primary True, secondary False. react to surplus 0. solar router should be at its max 87.1
+INFO 2024-02-20 12:56:11,435 react to surplus: primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 12:56:11,435 set secondary on. surplus -510W. router 87W. production 673W. total conso 163W
+INFO 2024-02-20 12:58:32,758 ==> we are drawing from grid 2279.2. primary True, secondary True. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 13:00:34,129 ==> we are drawing from grid 2147.9. primary True, secondary True. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 13:02:36,048 ==> we are drawing from grid 1228.8. primary True, secondary True. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 13:02:36,049 react to soutir. primary 0. primary is on True, secondary is on True
+INFO 2024-02-20 13:02:36,049 drawing from grid. set secondary off. surplus 1229W. router 0W. production 683W. total conso 1911W
+INFO 2024-02-20 13:04:57,360 ==> we are drawing from grid 960.1. primary True, secondary False. react to soutir 3. solar router should be at its min 0.0
+INFO 2024-02-20 13:06:58,438 ==> we are drawing from grid 1189.1. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 13:08:59,441 ==> we are drawing from grid 901.5. primary True, secondary False. react to soutir 1. solar router should be at its min 0.0
+WARNING 2024-02-20 13:13:01,531 WARNING: surplus -1209.1, while router not diverting enough 0.0 (expected 1800)
+INFO 2024-02-20 13:13:01,531 ==> we have surplus -1209.1, primary True, secondary False. react to surplus 2. solar router should be at its max 0.0
+WARNING 2024-02-20 13:15:02,268 WARNING: surplus -928.2, while router not diverting enough 0.0 (expected 1800)
+INFO 2024-02-20 13:15:02,268 ==> we have surplus -928.2, primary True, secondary False. react to surplus 1. solar router should be at its max 0.0
+WARNING 2024-02-20 13:17:03,626 WARNING: surplus -747.1, while router not diverting enough 188.5 (expected 1800)
+INFO 2024-02-20 13:17:03,627 ==> we have surplus -747.1, primary True, secondary False. react to surplus 0. solar router should be at its max 188.5
+INFO 2024-02-20 13:17:03,627 react to surplus: primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 13:17:03,627 set secondary on. surplus -747W. router 188W. production 945W. total conso 198W
+INFO 2024-02-20 13:19:25,211 ==> we are drawing from grid 2016.1. primary True, secondary True. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 13:21:26,248 ==> we are drawing from grid 2063.7. primary True, secondary True. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 13:23:27,022 ==> we are drawing from grid 1445.4. primary True, secondary True. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 13:23:27,023 react to soutir. primary 0. primary is on True, secondary is on True
+INFO 2024-02-20 13:23:27,023 drawing from grid. set secondary off. surplus 1445W. router 0W. production 485W. total conso 1930W
+INFO 2024-02-20 13:25:48,017 ==> we are drawing from grid 1442.2. primary True, secondary False. react to soutir 3. solar router should be at its min 0.0
+INFO 2024-02-20 13:27:49,059 ==> we are drawing from grid 1268.4. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 13:29:50,104 ==> we are drawing from grid 1061.9. primary True, secondary False. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 13:31:51,116 ==> we are drawing from grid 1115.5. primary True, secondary False. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 13:31:51,116 react to soutir. primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 13:31:51,117 drawing from grid. set primary off. surplus 1115W. router 0W. production 787W. total conso 1903W
+WARNING 2024-02-20 15:09:14,694 WARNING: surplus -542.3, while router not diverting enough 580.7 (expected 1800)
+INFO 2024-02-20 15:09:14,694 ==> we have surplus -542.3, primary False, secondary False. react to surplus 2. solar router should be at its max 580.7
+WARNING 2024-02-20 15:11:19,460 WARNING: surplus -262.9, while router not diverting enough 565.3 (expected 1800)
+INFO 2024-02-20 15:11:19,461 ==> we have surplus -262.9, primary False, secondary False. react to surplus 1. solar router should be at its max 565.3
+WARNING 2024-02-20 15:27:30,217 WARNING: surplus -672.2, while router not diverting enough 578.1 (expected 1800)
+INFO 2024-02-20 15:27:30,218 ==> we have surplus -672.2, primary False, secondary False. react to surplus 2. solar router should be at its max 578.1
+WARNING 2024-02-20 15:29:31,522 WARNING: surplus -958.0, while router not diverting enough 567.6 (expected 1800)
+INFO 2024-02-20 15:29:31,523 ==> we have surplus -958.0, primary False, secondary False. react to surplus 1. solar router should be at its max 567.6
+WARNING 2024-02-20 15:31:33,484 WARNING: surplus -535.9, while router not diverting enough 568.5 (expected 1800)
+INFO 2024-02-20 15:31:33,485 ==> we have surplus -535.9, primary False, secondary False. react to surplus 0. solar router should be at its max 568.5
+INFO 2024-02-20 15:31:33,485 react to surplus: primary 0. primary is on False, secondary is on False
+INFO 2024-02-20 15:31:33,486 set primary on. surplus -536W. router 568W. production 2572W. total conso 2036W
+INFO 2024-02-20 15:48:03,115 ==> we are drawing from grid 373.3. primary True, secondary False. react to soutir 2. solar router should be at its min 0.0
+INFO 2024-02-20 15:50:04,325 ==> we are drawing from grid 485.2. primary True, secondary False. react to soutir 1. solar router should be at its min 0.0
+INFO 2024-02-20 15:52:05,667 ==> we are drawing from grid 458.7. primary True, secondary False. react to soutir 0. solar router should be at its min 0.0
+INFO 2024-02-20 15:52:05,667 react to soutir. primary 0. primary is on True, secondary is on False
+INFO 2024-02-20 15:52:05,668 drawing from grid. set primary off. surplus 459W. router 0W. production 1414W. total conso 1872W
+WARNING 2024-02-21 01:00:02,924 got signal 15. automation: True
+INFO 2024-02-21 01:00:02,949 got SIGNAL: automation enabled. turns all heaters off.
+INFO 2024-02-21 01:00:02,949 in transition: turn all heaters off. because: got SIGNAL: automation enabled. turns all heaters off.
+INFO 2024-02-21 01:00:03,123 SIGNAL: SIGTERM, (eg shutdown)
+INFO 2024-02-21 01:01:42,968 --- solar2heater 3.63 starting ---
+INFO 2024-02-21 01:02:49,649 --- solar2heater 3.63 starting ---
+INFO 2024-02-21 01:02:51,364  send pushover:solar2heater: solar2heater 3.63 starting
+INFO 2024-02-21 01:02:51,365 sending email: subject: solar2heater starting. content: version 3.63. have fun
+ERROR 2024-02-21 01:02:53,355 cannot create st7789 SPI display [Errno 2] No such file or directory
+ERROR 2024-02-21 01:02:53,355 cannot create st7789 display
+INFO 2024-02-21 01:02:53,597 automation enabled
+INFO 2024-02-21 01:02:53,599 index for primary 0
+INFO 2024-02-21 01:02:54,561 blynk automation synced OK.
+INFO 2024-02-21 01:02:54,562 automation true, turn all heaters off at application start
+INFO 2024-02-21 01:02:54,562 in transition: turn all heaters off. because: application start and automation is true: True. turn off heaters
+INFO 2024-02-21 01:02:55,633 remote pzem volt: 231.40
+INFO 2024-02-21 01:02:55,997 remote pzem amps: 0.00
+INFO 2024-02-21 01:02:56,354 remote pzem power: 0.00
+INFO 2024-02-21 01:02:56,367 entering into/starting at nite while automation is: True
+INFO 2024-02-21 01:02:56,367 entering into/starting at nite: automation True. turn heaters off; let someone else care for it
+INFO 2024-02-21 01:02:56,368 in transition: turn all heaters off. because: entering into/starting at nite: automation True. turn heaters off; let someone else care for it
